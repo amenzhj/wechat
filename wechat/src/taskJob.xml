@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">  
+<beans>  
+<bean id="job1" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	<property name="targetObject">
+		<bean class="com.here2u.task.Job" />
+	</property>
+	<property name="targetMethod" value="doJob" />
+	<property name="concurrent" value="false" /><!-- 作业不并发调度 -->
+</bean>
+
+<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	<property name="jobDetail" ref="job1" />
+	<property name="cronExpression" value="0 0/1 * * * ?" />
+</bean>
+
+<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	<property name="triggers">
+		<list>
+			<ref bean="cronTrigger" />
+		</list>
+	</property>
+</bean>  
+</beans>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="user" extends="struts-default" namespace="">
+		<action name="login" class="com.here2u.action.UserAction"
+			method="login">
+			<result>/WEB-INF/theme.jsp</result>
+
+			<result name="input">login.jsp</result>
+		</action>
+
+		<action name="registe" class="com.here2u.action.UserAction"
+			method="registe">
+			<result>login.jsp</result>
+		</action>
+
+		<action name="unfollow" class="com.here2u.action.UserAction"
+			method="unfollow">
+			<result>login.jsp</result>
+		</action>
+	</package>
+
+	<package name="remind" extends="struts-default,json-default">
+		<action name="findReminds" class="com.here2u.action.RemindAction" method="findReminds">
+			<result type="json"></result>
+		</action>
+		<action name="addRemind" class="com.here2u.action.RemindAction"  method="addRemind">
+			<result type="json"></result>
+		</action>
+		<action name="removeRemind" class="com.here2u.action.RemindAction"  method="removeRemind">
+			<result type="json"></result>
+		</action>
+		<action name="updateRemind" class="com.here2u.action.RemindAction"  method="updateRemind">
+			<result type="json"></result>
+		</action>
+
+	</package>
+</struts>

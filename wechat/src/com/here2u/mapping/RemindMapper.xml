@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.here2u.dao.RemindMapper" >
+  <resultMap id="BaseResultMap" type="com.here2u.domain.Remind" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="title" property="title" jdbcType="CHAR" />
+    <result column="start" property="start" jdbcType="TIMESTAMP" />
+    <result column="end" property="end" jdbcType="TIMESTAMP" />
+    <result column="confname" property="confname" jdbcType="CHAR" />
+    <result column="description" property="description" jdbcType="CHAR" />
+    <result column="user_id" property="userId" jdbcType="CHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, title, start, end, confname, description, user_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_remind
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_remind
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.here2u.domain.Remind" >
+    insert into t_remind (id, title, start, 
+      end, confname, description, 
+      user_id)
+    values (#{id,jdbcType=INTEGER}, #{title,jdbcType=CHAR}, #{start,jdbcType=TIMESTAMP}, 
+      #{end,jdbcType=TIMESTAMP}, #{confname,jdbcType=CHAR}, #{description,jdbcType=CHAR}, 
+      #{userId,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.here2u.domain.Remind" >
+    insert into t_remind
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="start != null" >
+        start,
+      </if>
+      <if test="end != null" >
+        end,
+      </if>
+      <if test="confname != null" >
+        confname,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=CHAR},
+      </if>
+      <if test="start != null" >
+        #{start,jdbcType=TIMESTAMP},
+      </if>
+      <if test="end != null" >
+        #{end,jdbcType=TIMESTAMP},
+      </if>
+      <if test="confname != null" >
+        #{confname,jdbcType=CHAR},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=CHAR},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.here2u.domain.Remind" >
+    update t_remind
+    <set >
+      <if test="title != null" >
+        title = #{title,jdbcType=CHAR},
+      </if>
+      <if test="start != null" >
+        start = #{start,jdbcType=TIMESTAMP},
+      </if>
+      <if test="end != null" >
+        end = #{end,jdbcType=TIMESTAMP},
+      </if>
+      <if test="confname != null" >
+        confname = #{confname,jdbcType=CHAR},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=CHAR},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.here2u.domain.Remind" >
+    update t_remind
+    set title = #{title,jdbcType=CHAR},
+      start = #{start,jdbcType=TIMESTAMP},
+      end = #{end,jdbcType=TIMESTAMP},
+      confname = #{confname,jdbcType=CHAR},
+      description = #{description,jdbcType=CHAR},
+      user_id = #{userId,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <select id="selectReminds" resultMap="BaseResultMap"  parameterType="com.here2u.domain.Remind" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_remind
+    where  user_id = #{userId,jdbcType=CHAR} and
+      start &gt;= #{start,jdbcType=TIMESTAMP} and
+      end &lt;= #{end,jdbcType=TIMESTAMP}
+  </select>
+  
+    <delete id="deleteRemind" parameterType="com.here2u.domain.Remind" >
+    delete from t_remind
+    where id = #{id,jdbcType=INTEGER} and user_id = #{userId,jdbcType=CHAR}
+  </delete>
+
+</mapper>
