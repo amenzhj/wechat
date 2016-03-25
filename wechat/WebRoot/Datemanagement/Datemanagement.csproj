@@ -1,0 +1,692 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A33C8C45-1EA7-4F17-A309-73794E499F02}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Datemanagement</RootNamespace>
+    <AssemblyName>Datemanagement</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="devappwithfullcanlendar\css\maincontent.css" />
+    <Content Include="devappwithfullcanlendar\css\mainstructure.css" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-bg_glass_75_d0e5f5_1x400.bak.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-bg_glass_75_d0e5f5_1x400old.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-bg_glass_85_dfeffc_1x400old.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100old.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="devappwithfullcanlendar\css\redmond\jquery-ui-1.8.1.custom.css" />
+    <Content Include="devappwithfullcanlendar\gbin1schedule.htm" />
+    <Content Include="devappwithfullcanlendar\js\formValidator\css\validationEngine.jquery.css" />
+    <Content Include="devappwithfullcanlendar\js\formValidator\demoSubmit.html" />
+    <Content Include="devappwithfullcanlendar\js\formValidator\index.html" />
+    <Content Include="devappwithfullcanlendar\js\formValidator\js\jquery.validationEngine-en.js" />
+    <Content Include="devappwithfullcanlendar\js\formValidator\js\jquery.validationEngine-es.js" />
+    <Content Include="devappwithfullcanlendar\js\formValidator\js\jquery.validationEngine-fr.js" />
+    <Content Include="devappwithfullcanlendar\js\formValidator\js\jquery.validationEngine-pt.js" />
+    <Content Include="devappwithfullcanlendar\js\formValidator\js\jquery.validationEngine.js" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\css\fullcalendar.css" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\fullcalendar.css" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\fullcalendar.js" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\fullcalendar.min.js" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\gcal.js" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\images\butt_next.gif" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\images\butt_next_black.gif" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\images\butt_pre.gif" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\images\butt_pre_black.gif" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\images\butt_today.gif" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\images\butt_today_black.gif" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\ui.core.js" />
+    <Content Include="devappwithfullcanlendar\js\fullcal\ui.draggable.js" />
+    <Content Include="devappwithfullcanlendar\js\jquery-1.4.2.min.js" />
+    <Content Include="devappwithfullcanlendar\js\jquery-ui-1.8.6.custom.min.js" />
+    <Content Include="devappwithfullcanlendar\js\jquery-ui-timepicker-addon.js" />
+    <Content Include="fullcalendar-1.5.4\changelog.txt" />
+    <Content Include="fullcalendar-1.5.4\demos\agenda-views.html" />
+    <Content Include="fullcalendar-1.5.4\demos\basic-views.html" />
+    <Content Include="fullcalendar-1.5.4\demos\css\maincontent.css" />
+    <Content Include="fullcalendar-1.5.4\demos\css\mainstructure.css" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-bg_glass_75_d0e5f5_1x400.bak.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-bg_glass_75_d0e5f5_1x400old.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-bg_glass_85_dfeffc_1x400old.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100old.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="fullcalendar-1.5.4\demos\css\redmond\jquery-ui-1.8.1.custom.css" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="fullcalendar-1.5.4\demos\cupertino\theme.css" />
+    <Content Include="fullcalendar-1.5.4\demos\default.html" />
+    <Content Include="fullcalendar-1.5.4\demos\external-dragging.html" />
+    <Content Include="fullcalendar-1.5.4\demos\gcal.html" />
+    <Content Include="fullcalendar-1.5.4\demos\json.html" />
+    <Content Include="fullcalendar-1.5.4\demos\selectable.html" />
+    <Content Include="fullcalendar-1.5.4\demos\theme.html" />
+    <Content Include="fullcalendar-1.5.4\fullcalendar\fullcalendar.css" />
+    <Content Include="fullcalendar-1.5.4\fullcalendar\fullcalendar.js" />
+    <Content Include="fullcalendar-1.5.4\fullcalendar\fullcalendar.min.js" />
+    <Content Include="fullcalendar-1.5.4\fullcalendar\fullcalendar.print.css" />
+    <Content Include="fullcalendar-1.5.4\fullcalendar\gcal.js" />
+    <Content Include="fullcalendar-1.5.4\GPL-LICENSE.txt" />
+    <Content Include="fullcalendar-1.5.4\jquery\datepicker-zh.js" />
+    <Content Include="fullcalendar-1.5.4\jquery\jquery-1.8.1.min.js" />
+    <Content Include="fullcalendar-1.5.4\jquery\jquery-ui-1.8.23.custom.min.js" />
+    <Content Include="fullcalendar-1.5.4\jquery\jquery-ui.css" />
+    <Content Include="fullcalendar-1.5.4\jquery\jquery-ui.min1.9.1.js" />
+    <Content Include="fullcalendar-1.5.4\jquery\jquery-1.8.2.min.js" />
+    <Content Include="fullcalendar-1.5.4\MIT-LICENSE.txt" />
+    <Content Include="HTMLPage1.htm" />
+    <Content Include="jquery-easyui-1.3.2\changelog.txt" />
+    <Content Include="jquery-easyui-1.3.2\easyloader.js" />
+    <Content Include="jquery-easyui-1.3.2\jquery-1.8.0.min.js" />
+    <Content Include="jquery-easyui-1.3.2\jquery.easyui.min.js" />
+    <Content Include="jquery-easyui-1.3.2\licence_gpl.txt" />
+    <Content Include="jquery-easyui-1.3.2\license_commercial.txt" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-af.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-ar.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-bg.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-ca.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-cs.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-cz.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-da.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-de.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-el.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-en.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-es.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-fr.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-it.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-jp.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-nl.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-pt_BR.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-ru.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-tr.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-zh_CN.js" />
+    <Content Include="jquery-easyui-1.3.2\locale\easyui-lang-zh_TW.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.accordion.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.calendar.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.combo.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.combobox.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.combogrid.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.combotree.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.datagrid.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.datebox.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.datetimebox.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.dialog.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.draggable.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.droppable.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.form.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.layout.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.linkbutton.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.menu.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.menubutton.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.messager.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.numberbox.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.numberspinner.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.pagination.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.panel.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.parser.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.progressbar.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.propertygrid.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.resizable.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.searchbox.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.slider.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.spinner.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.splitbutton.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.tabs.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.timespinner.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.tree.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.treegrid.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.validatebox.js" />
+    <Content Include="jquery-easyui-1.3.2\plugins\jquery.window.js" />
+    <Content Include="jquery-easyui-1.3.2\readme.txt" />
+    <Content Include="jquery-easyui-1.3.2\src\easyloader.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.accordion.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.calendar.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.combobox.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.datebox.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.draggable.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.droppable.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.form.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.linkbutton.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.menu.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.parser.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.progressbar.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.propertygrid.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.resizable.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.slider.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.tabs.js" />
+    <Content Include="jquery-easyui-1.3.2\src\jquery.window.js" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\accordion.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\calendar.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\combo.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\combobox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\datagrid.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\datebox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\dialog.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\easyui.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\accordion_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\blank.gif" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\calendar_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\combo_arrow.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\datagrid_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\datebox_arrow.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\layout_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\linkbutton_bg.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\loading.gif" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\menu_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\messager_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\pagination_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\panel_tools.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\searchbox_button.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\slider_handle.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\spinner_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\tabs_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\tree_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\validatebox_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\images\validatebox_warning.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\layout.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\linkbutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\menu.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\menubutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\messager.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\pagination.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\panel.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\progressbar.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\propertygrid.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\searchbox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\slider.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\spinner.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\splitbutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\tabs.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\tree.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\validatebox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\black\window.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\accordion.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\calendar.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\combo.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\combobox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\datagrid.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\datebox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\dialog.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\easyui.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\blank.gif" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\loading.gif" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\validatebox_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\layout.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\linkbutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\menu.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\menubutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\messager.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\pagination.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\panel.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\progressbar.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\propertygrid.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\searchbox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\slider.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\spinner.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\splitbutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\tabs.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\tree.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\validatebox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\bootstrap\window.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\accordion.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\calendar.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\combo.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\combobox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\datagrid.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\datebox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\dialog.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\easyui.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\accordion_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\blank.gif" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\calendar_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\combo_arrow.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\datagrid_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\datebox_arrow.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\layout_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\linkbutton_bg.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\loading.gif" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\menu_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\messager_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\pagination_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\panel_tools.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\searchbox_button.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\slider_handle.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\spinner_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\tabs_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\tree_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\validatebox_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\images\validatebox_warning.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\layout.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\linkbutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\menu.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\menubutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\messager.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\pagination.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\panel.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\progressbar.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\propertygrid.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\searchbox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\slider.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\spinner.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\splitbutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\tabs.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\tree.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\validatebox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\default\window.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\accordion.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\calendar.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\combo.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\combobox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\datagrid.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\datebox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\dialog.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\easyui.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\accordion_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\blank.gif" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\calendar_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\combo_arrow.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\datagrid_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\datebox_arrow.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\layout_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\loading.gif" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\menu_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\messager_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\pagination_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\panel_tools.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\searchbox_button.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\slider_handle.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\spinner_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\tabs_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\tree_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\validatebox_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\images\validatebox_warning.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\layout.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\linkbutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\menu.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\menubutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\messager.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\pagination.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\panel.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\progressbar.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\propertygrid.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\searchbox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\slider.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\spinner.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\splitbutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\tabs.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\tree.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\validatebox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\gray\window.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\icon.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\back.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\blank.gif" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\cancel.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\cut.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\edit_add.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\edit_remove.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\filesave.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\help.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\mini_add.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\mini_edit.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\mini_refresh.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\no.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\ok.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\pencil.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\print.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\redo.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\reload.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\search.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\sum.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\tip.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\icons\undo.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\accordion.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\calendar.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\combo.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\combobox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\datagrid.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\datebox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\dialog.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\easyui.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\accordion_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\blank.gif" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\calendar_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\combo_arrow.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\datagrid_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\datebox_arrow.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\layout_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\loading.gif" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\menu_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\messager_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\pagination_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\panel_tools.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\searchbox_button.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\slider_handle.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\spinner_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\tabs_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\tree_icons.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\validatebox_arrows.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\images\validatebox_warning.png" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\layout.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\linkbutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\menu.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\menubutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\messager.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\pagination.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\panel.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\progressbar.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\propertygrid.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\searchbox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\slider.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\spinner.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\splitbutton.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\tabs.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\tree.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\validatebox.css" />
+    <Content Include="jquery-easyui-1.3.2\themes\metro\window.css" />
+    <Content Include="jQuery-Timepicker-Addon-master\index.html" />
+    <Content Include="jQuery-Timepicker-Addon-master\jquery-ui-sliderAccess.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\jquery-ui-timepicker-addon.css" />
+    <Content Include="jQuery-Timepicker-Addon-master\jquery-ui-timepicker-addon.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-af.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-bg.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-ca.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-cs.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-de.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-el.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-es.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-et.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-fi.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-fr.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-gl.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-he.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-hu.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-id.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-it.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-ja.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-ko.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-lt.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-nl.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-no.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-pl.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-pt-BR.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-pt.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-ro.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-ru.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-sk.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-sv.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-tr.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-uk.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-vi.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-zh-CN.js" />
+    <Content Include="jQuery-Timepicker-Addon-master\localization\jquery-ui-timepicker-zh-TW.js" />
+    <Content Include="jtimepicker\changelog.html" />
+    <Content Include="jtimepicker\css\jquery.timepicker.css" />
+    <Content Include="jtimepicker\css\style.css" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="jtimepicker\css\ui\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jtimepicker\css\ui\base\ui.accordion.css" />
+    <Content Include="jtimepicker\css\ui\base\ui.all.css" />
+    <Content Include="jtimepicker\css\ui\base\ui.base.css" />
+    <Content Include="jtimepicker\css\ui\base\ui.core.css" />
+    <Content Include="jtimepicker\css\ui\base\ui.datepicker.css" />
+    <Content Include="jtimepicker\css\ui\base\ui.dialog.css" />
+    <Content Include="jtimepicker\css\ui\base\ui.progressbar.css" />
+    <Content Include="jtimepicker\css\ui\base\ui.resizable.css" />
+    <Content Include="jtimepicker\css\ui\base\ui.slider.css" />
+    <Content Include="jtimepicker\css\ui\base\ui.tabs.css" />
+    <Content Include="jtimepicker\css\ui\base\ui.theme.css" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jtimepicker\css\ui\smoothness\jquery-ui-1.7.1.custom.css" />
+    <Content Include="jtimepicker\css\ui\smoothness\ui.accordion.css" />
+    <Content Include="jtimepicker\css\ui\smoothness\ui.all.css" />
+    <Content Include="jtimepicker\css\ui\smoothness\ui.base.css" />
+    <Content Include="jtimepicker\css\ui\smoothness\ui.core.css" />
+    <Content Include="jtimepicker\css\ui\smoothness\ui.datepicker.css" />
+    <Content Include="jtimepicker\css\ui\smoothness\ui.dialog.css" />
+    <Content Include="jtimepicker\css\ui\smoothness\ui.progressbar.css" />
+    <Content Include="jtimepicker\css\ui\smoothness\ui.resizable.css" />
+    <Content Include="jtimepicker\css\ui\smoothness\ui.slider.css" />
+    <Content Include="jtimepicker\css\ui\smoothness\ui.tabs.css" />
+    <Content Include="jtimepicker\css\ui\smoothness\ui.theme.css" />
+    <Content Include="jtimepicker\images\icon_clock_1.gif" />
+    <Content Include="jtimepicker\images\icon_clock_2.gif" />
+    <Content Include="jtimepicker\index.html" />
+    <Content Include="jtimepicker\lib\jquery-1.3.2.min.js" />
+    <Content Include="jtimepicker\lib\jquery.jtimepicker.js" />
+    <Content Include="jtimepicker\lib\ui.core.js" />
+    <Content Include="jtimepicker\lib\ui.slider.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sr\AccessDate.ashx.cs">
+      <DependentUpon>AccessDate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="sr\getallid.ashx.cs">
+      <DependentUpon>getallid.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="sr\GetID.ashx.cs">
+      <DependentUpon>GetID.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="sr\removedate.ashx.cs">
+      <DependentUpon>removedate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="sr\Updateinfo.ashx.cs">
+      <DependentUpon>Updateinfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="devappwithfullcanlendar\css\redmond\images\Thumbs.db" />
+    <None Include="devappwithfullcanlendar\js\fullcal\images\Thumbs.db" />
+    <None Include="fullcalendar-1.5.4\demos\.DS_Store" />
+    <None Include="fullcalendar-1.5.4\demos\css\redmond\images\Thumbs.db" />
+    <None Include="fullcalendar-1.5.4\demos\json-events.php" />
+    <Content Include="sr\AccessDate.ashx" />
+    <None Include="jquery-easyui-1.3.2\themes\black\images\Thumbs.db" />
+    <None Include="jquery-easyui-1.3.2\themes\bootstrap\images\Thumbs.db" />
+    <None Include="jquery-easyui-1.3.2\themes\default\images\Thumbs.db" />
+    <None Include="jquery-easyui-1.3.2\themes\gray\images\Thumbs.db" />
+    <None Include="jquery-easyui-1.3.2\themes\metro\images\Thumbs.db" />
+    <None Include="jQuery-Timepicker-Addon-master\README.md" />
+    <Content Include="sr\GetID.ashx" />
+    <Content Include="sr\getallid.ashx" />
+    <Content Include="sr\Updateinfo.ashx" />
+    <Content Include="sr\removedate.ashx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>11174</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
