@@ -1,23 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">  
 <beans>  
-<bean id="job1" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
-	<property name="targetObject">
-		<bean class="com.here2u.task.Job" />
-	</property>
-	<property name="targetMethod" value="doJob" />
+    
+<bean id="job" class="com.here2u.task.Job" />
+<bean id="findReminds" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	<property name="targetObject" ref="job"/>
+	<property name="targetMethod" value="findReminds" />
 	<property name="concurrent" value="false" /><!-- 作业不并发调度 -->
 </bean>
-
-<bean id="cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
-	<property name="jobDetail" ref="job1" />
+<bean id="getReminds" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	<property name="jobDetail" ref="findReminds" />
 	<property name="cronExpression" value="0 0/1 * * * ?" />
 </bean>
+
+
+<bean id="refreshToken" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	<property name="targetObject" ref="job"/>
+	<property name="targetMethod" value="refreshToken" />
+	<property name="concurrent" value="false" /><!-- 作业不并发调度 -->
+</bean>
+<bean id="getToken" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	<property name="jobDetail" ref="refreshToken" />
+	<property name="cronExpression" value="0 0 0/1 * * ?" />
+</bean>
+
 
 <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 	<property name="triggers">
 		<list>
-			<ref bean="cronTrigger" />
+			<ref bean="getReminds" />
+			<ref bean="getToken" />
 		</list>
 	</property>
 </bean>  

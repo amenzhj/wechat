@@ -15,4 +15,6 @@ public interface RemindServiceI
     void updateRemind(Remind remind);
     
     Remind findRemind(Integer id);
+    
+    List<Remind> findUser2Reminds();
 }

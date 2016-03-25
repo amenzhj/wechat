@@ -21,4 +21,6 @@ public interface RemindMapper
     int deleteRemind(Remind record);
 
     List<Remind> selectReminds(Remind record);
+    
+    List<Remind> selectUser2Reminds();
 }

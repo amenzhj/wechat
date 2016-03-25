@@ -3,9 +3,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
                       http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	version="3.0">
-	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>
+
 
 	<listener>
 		<description>Spring监听器</description>
@@ -32,7 +30,7 @@
 	</filter>
 	<filter-mapping>
 		<filter-name>struts2</filter-name>
-		<url-pattern>/*</url-pattern>
+		<url-pattern>*.action</url-pattern>
 	</filter-mapping>
 
 	<servlet>
@@ -46,7 +44,6 @@
 		<url-pattern>/coreServlet</url-pattern>
 	</servlet-mapping>
 
-
 	<servlet>
 		<servlet-name>oauthServlet</servlet-name>
 		<servlet-class>com.here2u.weixin.servlet.OAuthServlet</servlet-class>
@@ -55,4 +52,27 @@
 		<servlet-name>oauthServlet</servlet-name>
 		<url-pattern>/oauthServlet</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>initServlet</servlet-name>
+		<servlet-class>com.here2u.weixin.servlet.InitServlet</servlet-class>
+		<init-param>
+			<param-name>APPID</param-name>
+			<param-value>wx458983b1f9e70773</param-value>
+		</init-param>
+		<init-param>
+			<param-name>APPSECRET</param-name>
+			<param-value>14160407ec80f00b94ff0a76dba41c90</param-value>
+		</init-param>
+		<init-param>
+			<param-name>BASETOKEN</param-name>
+			<param-value>wzcm123</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
 </web-app>

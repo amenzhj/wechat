@@ -32,4 +32,11 @@ public class Token {
     {
         this.expiresIn = expiresIn;
     }
+    
+    @Override
+    public String toString()
+    {
+        return "Token [accessToken=" + accessToken + ", expiresIn=" + expiresIn + "]";
+    }
+
 }

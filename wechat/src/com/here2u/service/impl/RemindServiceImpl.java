@@ -47,4 +47,11 @@ public class RemindServiceImpl implements RemindServiceI
         return remindMapper.selectByPrimaryKey(id);
     }
     
+    @Override
+    public List<Remind> findUser2Reminds()
+    {
+        return remindMapper.selectUser2Reminds();
+
+    }
+    
 }
