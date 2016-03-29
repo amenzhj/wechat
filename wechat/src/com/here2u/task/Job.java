@@ -29,6 +29,16 @@ public class Job
     {
         List<Remind> remindList = remindService.findUser2Reminds();
         System.out.println(remindList);
+        // 第三方用户唯一凭证
+        String appId = "wx0c9c9660e38ec1d2";
+        // 第三方用户唯一凭证密钥
+        String appSecret = "d4624c36b6795d1d99dcf0547af5443d";
+
+        for (Remind remind : remindList)
+        {
+            // CommonUtil.sendTemplateMessage(InitServlet.APPID, InitServlet.APPSECRET, remind);
+            CommonUtil.sendTemplateMessage(appId, appSecret, remind);
+        }
     }
 }
 

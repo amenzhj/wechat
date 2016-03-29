@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 
 import com.here2u.domain.User;
 import com.here2u.service.UserServiceI;
+import com.here2u.weixin.pojo.SNSUserInfo;
 
 @Controller
 public class UserAction extends BaseAction
@@ -49,6 +50,34 @@ public class UserAction extends BaseAction
         }
     }
     
+    public String bind()
+    {
+        SNSUserInfo snsUserInfo = (SNSUserInfo)getRequest().getAttribute("snsUserInfo");
+        String userId = snsUserInfo.getOpenId();
+        User user = userService.findUser(userId);
+        if (user != null && user.getRemindSetting() == true)
+        {
+            getSession().put("userId", userId);
+            return SUCCESS;
+        }
+        if (user != null && user.getRemindSetting() == false)
+        {
+            user.setRemindSetting(true);
+            userService.updateUser(user);
+            getSession().put("userId", userId);
+            return SUCCESS;
+        }
+        else
+        {
+            user = new User();
+            user.setUserId(userId);
+            user.setRemindSetting(true);
+            userService.addUser(user);
+            getSession().put("userId", userId);
+            return SUCCESS;
+        }
+    }
+
     public String unfollow()
     {
         User user = new User();

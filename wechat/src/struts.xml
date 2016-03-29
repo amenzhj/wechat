@@ -20,6 +20,11 @@
 			method="unfollow">
 			<result>login.jsp</result>
 		</action>
+		
+		<action name="bind" class="com.here2u.action.UserAction"
+			method="bind">
+			<result>/WEB-INF/theme.jsp</result>
+		</action>
 	</package>
 
 	<package name="remind" extends="struts-default,json-default">

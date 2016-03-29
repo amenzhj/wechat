@@ -42,6 +42,11 @@ public class MenuManager {
 		btn13.setType("view");
 		btn13.setUrl("http://www.iteye.com");
 
+        ViewButton btn14 = new ViewButton();
+        btn14.setName("日历管理");
+        btn14.setType("view");
+        btn14.setUrl("https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx0c9c9660e38ec1d2&redirect_uri=http%3A%2F%2Fhere2u.tunnel.qydev.com%2Fwechat%2FoauthServlet&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect");
+
 		ViewButton btn21 = new ViewButton();
         btn21.setName("淘宝");
 		btn21.setType("view");
@@ -79,7 +84,7 @@ public class MenuManager {
 
 		ComplexButton mainBtn1 = new ComplexButton();
         mainBtn1.setName("技术交流");
-		mainBtn1.setSub_button(new Button[] { btn11, btn12, btn13 });
+        mainBtn1.setSub_button(new Button[] {btn11, btn12, btn13, btn14});
 
 		ComplexButton mainBtn2 = new ComplexButton();
         mainBtn2.setName("购物");
