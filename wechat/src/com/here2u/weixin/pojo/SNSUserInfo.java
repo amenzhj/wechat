@@ -5,32 +5,51 @@ import java.util.List;
 /**
  * 通过网页授权获取的用户信息
  * 
- * @author liufeng
- * @date 2013-11-09
+ * @author Joki
+ * @version [V1.00, 2016年4月3日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class SNSUserInfo {
-    // 用户标识
+public class SNSUserInfo
+{
+    /**
+     * 用户标识
+     */
     private String openId;
     
-    // 用户昵称
+    /**
+     * 用户昵称
+     */
     private String nickname;
     
-    // 性别（1是男性，2是女性，0是未知）
+    /**
+     * 性别（1是男性，2是女性，0是未知）
+     */
     private int sex;
     
-    // 国家
+    /**
+     * 国家
+     */
     private String country;
     
-    // 省份
+    /**
+     * 省份
+     */
     private String province;
     
-    // 城市
+    /**
+     * 城市
+     */
     private String city;
     
-    // 用户头像链接
+    /**
+     * 用户头像链接
+     */
     private String headImgUrl;
     
-    // 用户特权信息
+    /**
+     * 用户特权信息
+     */
     private List<String> privilegeList;
 
     public String getOpenId()

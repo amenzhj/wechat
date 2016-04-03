@@ -1,19 +1,48 @@
 package com.here2u.weixin.pojo.data;
 
-public class Data
+/**
+ * remind数据model
+ * 
+ * @author Joki
+ * @version [V1.00, 2016年4月3日]
+ * @see [相关类/方法]
+ * @since V1.00
+ */
+public class DataRemind
 {
+    /**
+     * 第一句话
+     */
     private DataFirst first;
     
+    /**
+     * 标题
+     */
     private DataTitle title;
     
+    /**
+     * 开始时间
+     */
     private DataStart start;
     
+    /**
+     * 结束时间
+     */
     private DataEnd end;
     
+    /**
+     * 重要程度
+     */
     private DataConfname confname;
     
+    /**
+     * 描述
+     */
     private DataDescription description;
     
+    /**
+     * 末尾用户自行添加多行需要的内容
+     */
     private DataRemark remark;
     
     public DataFirst getFirst()
@@ -92,5 +121,4 @@ public class Data
         return "Data [first=" + first + ", title=" + title + ", start=" + start + ", end=" + end + ", confname=" + confname + ", description=" + description + ", remark=" + remark + "]";
     }
     
-
 }

@@ -3,17 +3,26 @@ package com.here2u.weixin.pojo;
 /**
  * 公众账号分组信息
  * 
- * @author liufeng
- * @date 2013-11-09
+ * @author Joki
+ * @version [V1.00, 2016年4月3日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class WeixinGroup {
-    // 分组id
+public class WeixinGroup
+{
+    /**
+     * 分组id，由微信分配
+     */
     private int id;
     
-    // 分组名称
+    /**
+     * 分组名字，UTF8编码
+     */
     private String name;
     
-    // 分组内的用户数
+    /**
+     * 分组内的用户数
+     */
     private int count;
 
     public int getId()

@@ -5,20 +5,31 @@ import java.util.List;
 /**
  * 关注用户列表
  * 
- * @author liufeng
- * @date 2013-11-09
+ * @author Joki
+ * @version [V1.00, 2016年4月3日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class WeixinUserList {
-    // 公众账号的总关注用户数
+public class WeixinUserList
+{
+    /**
+     * 公众账号的总关注用户数
+     */
     private int total;
     
-    // 获取的OpenID个数
+    /**
+     * 获取的OpenID个数
+     */
     private int count;
     
-    // OpenID列表
+    /**
+     * OpenID列表
+     */
     private List<String> openIdList;
     
-    // 拉取列表的后一个用户的OPENID
+    /**
+     * 拉取列表的后一个用户的OPENID
+     */
     private String nextOpenId;
 
     public int getTotal()

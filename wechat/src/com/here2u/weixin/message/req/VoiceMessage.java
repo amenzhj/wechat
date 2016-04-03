@@ -3,17 +3,26 @@ package com.here2u.weixin.message.req;
 /**
  * 语音消息
  * 
- * @author liufeng
- * @date 2013-09-11
+ * @author Joki
+ * @version [V1.00, 2016年4月1日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class VoiceMessage extends BaseMessage {
-    // 媒体ID
+public class VoiceMessage extends BaseMessage
+{
+    /**
+     * 媒体ID
+     */
     private String MediaId;
     
-    // 语音格式
+    /**
+     * 语音格式
+     */
     private String Format;
     
-    // 语音识别结果，UTF8编码
+    /**
+     * 语音识别结果，UTF8编码
+     */
     private String Recognition;
 
     public String getMediaId()

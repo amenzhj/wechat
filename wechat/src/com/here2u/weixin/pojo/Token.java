@@ -1,16 +1,24 @@
 package com.here2u.weixin.pojo;
 
 /**
+ * 
  * 凭证
  * 
- * @author liufeng
- * @date 2013-10-17
+ * @author Joki
+ * @version [V1.00, 2016年3月31日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class Token {
-    // 接口访问凭证
+public class Token
+{
+    /**
+     * 接口访问凭证
+     */
     private String accessToken;
     
-    // 凭证有效期，单位：秒
+    /**
+     * 凭证有效期，单位：秒
+     */
     private int expiresIn;
 
     public String getAccessToken()

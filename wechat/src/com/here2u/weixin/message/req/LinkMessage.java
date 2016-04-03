@@ -3,17 +3,27 @@ package com.here2u.weixin.message.req;
 /**
  * 链接消息
  * 
- * @author liufeng
- * @date 2013-09-11
+ * @author Joki
+ * @version [V1.00, 2016年4月1日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class LinkMessage extends BaseMessage {
-    // 消息标题
+
+public class LinkMessage extends BaseMessage
+{
+    /**
+     * 消息标题
+     */
     private String Title;
     
-    // 消息描述
+    /**
+     * 消息描述
+     */
     private String Description;
     
-    // 消息链接
+    /**
+     * 消息链接
+     */
     private String Url;
 
     public String getTitle()

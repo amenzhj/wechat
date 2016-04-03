@@ -22,7 +22,7 @@ import org.slf4j.LoggerFactory;
 import com.here2u.domain.Remind;
 import com.here2u.util.DateUtil;
 import com.here2u.weixin.pojo.Token;
-import com.here2u.weixin.pojo.data.Data;
+import com.here2u.weixin.pojo.data.DataRemind;
 import com.here2u.weixin.pojo.data.DataConfname;
 import com.here2u.weixin.pojo.data.DataDescription;
 import com.here2u.weixin.pojo.data.DataEnd;
@@ -30,19 +30,21 @@ import com.here2u.weixin.pojo.data.DataFirst;
 import com.here2u.weixin.pojo.data.DataRemark;
 import com.here2u.weixin.pojo.data.DataStart;
 import com.here2u.weixin.pojo.data.DataTitle;
-import com.here2u.weixin.pojo.data.NewRemindsTemplate;
+import com.here2u.weixin.pojo.data.TemplateNews;
 
 /**
  * 通用工具类
  * 
- * @author liufeng
- * @date 2013-10-17
+ * @author Joki
+ * @version [V1.00, 2016年3月31日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
 public class CommonUtil
 {
     private static Logger log = LoggerFactory.getLogger(CommonUtil.class);
     
-    // 凭证获取（GET）
+    // 凭证获取（http请求方式: GET）
     public final static String token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=APPID&secret=APPSECRET";
     
     /**
@@ -117,8 +119,8 @@ public class CommonUtil
     /**
      * 获取接口访问凭证
      * 
-     * @param appid 凭证
-     * @param appsecret 密钥
+     * @param appid 第三方用户唯一凭证
+     * @param appsecret 第三方用户唯一凭证密钥
      * @return
      */
     public static Token getToken(String appid, String appsecret)
@@ -188,11 +190,14 @@ public class CommonUtil
         return fileExt;
     }
     
-    /*
+    /**
      * 微信公众平台开发之模板消息(Java)
-     * appId 公众账号的唯一标识
-     * appSecret 公众账号的密钥
-     * openId 用户标识
+     * 
+     * 
+     * @param appId 公众账号的唯一标识
+     * @param appSecret 公众账号的密钥
+     * @param remind
+     * @see [类、类#方法、类#成员]
      */
     public static void sendTemplateMessage(String appId, String appSecret, Remind remind)
     {
@@ -201,9 +206,9 @@ public class CommonUtil
         String access_token = token.getAccessToken();
         String url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" + access_token;
 
-        NewRemindsTemplate temp = new NewRemindsTemplate();
+        TemplateNews temp = new TemplateNews();
 
-        Data data = new Data();
+        DataRemind data = new DataRemind();
 
         DataFirst first = new DataFirst();
         

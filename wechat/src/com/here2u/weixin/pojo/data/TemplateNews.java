@@ -1,16 +1,39 @@
 package com.here2u.weixin.pojo.data;
 
-public class NewRemindsTemplate
+/**
+ * 模板消息
+ * 
+ * @author Joki
+ * @version [V1.00, 2016年4月3日]
+ * @see [相关类/方法]
+ * @since V1.00
+ */
+public class TemplateNews
 {
-    private String touser; // 用户OpenID
+    /**
+     * 用户OpenID
+     */
+    private String touser;
     
-    private String template_id; // 模板消息ID
+    /**
+     * 模板消息ID
+     */
+    private String template_id;
     
-    private String url; // URL置空，则在发送后，点击模板消息会进入一个空白页面（ios），或无法点击（android）。
+    /**
+     * URL置空，则在发送后，点击模板消息会进入一个空白页面（ios），或无法点击（android）。
+     */
+    private String url;
     
-    private String topcolor; // 标题颜色
+    /**
+     * 标题颜色
+     */
+    private String topcolor;
     
-    private Data data; // 详细内容
+    /**
+     * 详细内容
+     */
+    private DataRemind data;
     
     public String getTouser()
     {
@@ -52,12 +75,12 @@ public class NewRemindsTemplate
         this.topcolor = topcolor;
     }
     
-    public Data getData()
+    public DataRemind getData()
     {
         return data;
     }
     
-    public void setData(Data data)
+    public void setData(DataRemind data)
     {
         this.data = data;
     }

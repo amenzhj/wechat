@@ -8,21 +8,30 @@ import org.slf4j.LoggerFactory;
 import com.here2u.weixin.menu.Menu;
 
 /**
+ * 
  * 自定义菜单工具类
  * 
- * @author liufeng
- * @date 2013-10-17
+ * @author Joki
+ * @version [V1.00, 2016年4月1日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
 public class MenuUtil {
     private static Logger log = LoggerFactory.getLogger(MenuUtil.class);
 
-    // 菜单创建（POST）
+    /**
+     * 菜单创建（POST）
+     */
     public final static String menu_create_url = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=ACCESS_TOKEN";
     
-    // 菜单查询（GET）
+    /**
+     * 菜单查询（GET）
+     */
     public final static String menu_get_url = "https://api.weixin.qq.com/cgi-bin/menu/get?access_token=ACCESS_TOKEN";
     
-    // 菜单删除（GET）
+    /**
+     * 菜单删除（GET）
+     */
     public final static String menu_delete_url = "https://api.weixin.qq.com/cgi-bin/menu/delete?access_token=ACCESS_TOKEN";
 
     /**

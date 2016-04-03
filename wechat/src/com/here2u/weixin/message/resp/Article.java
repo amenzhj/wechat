@@ -1,22 +1,33 @@
 package com.here2u.weixin.message.resp;
 
 /**
- * 图文model
+ * Title
  * 
- * @author liufeng
- * @date 2013-09-11
+ * @author Joki
+ * @version [V1.00, 2016年4月3日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class Article {
-    // 图文消息名称
+public class Article
+{
+    /**
+     * 图文消息名称
+     */
     private String Title;
     
-    // 图文消息描述
+    /**
+     * 图文消息描述
+     */
     private String Description;
     
-    // 图片链接，支持JPG、PNG格式，较好的效果为大图640*320，小图80*80
+    /**
+     * 图片链接，支持JPG、PNG格式，较好的效果为大图640*320，小图80*80
+     */
     private String PicUrl;
     
-    // 点击图文消息跳转链接
+    /**
+     * 点击图文消息跳转链接
+     */
     private String Url;
 
     public String getTitle()

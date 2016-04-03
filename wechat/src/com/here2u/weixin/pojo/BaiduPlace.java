@@ -3,26 +3,41 @@ package com.here2u.weixin.pojo;
 /**
  * 地址信息
  * 
- * @author liufeng
- * @date 2013-03-16
+ * @author Joki
+ * @version [V1.00, 2016年4月3日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class BaiduPlace implements Comparable<BaiduPlace> {
-    // 名称
+public class BaiduPlace implements Comparable<BaiduPlace>
+{
+    /**
+     * 名称
+     */
     private String name;
     
-    // 详细地址
+    /**
+     * 详细地址
+     */
     private String address;
     
-    // 经度
+    /**
+     * 经度
+     */
     private String lng;
     
-    // 纬度
+    /**
+     * 纬度
+     */
     private String lat;
     
-    // 联系电话
+    /**
+     * 联系电话
+     */
     private String telephone;
     
-    // 距离
+    /**
+     * 距离
+     */
     private int distance;
 
     public String getName()

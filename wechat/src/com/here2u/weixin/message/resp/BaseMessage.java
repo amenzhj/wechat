@@ -3,20 +3,31 @@ package com.here2u.weixin.message.resp;
 /**
  * 消息基类（公众帐号 -> 普通用户）
  * 
- * @author liufeng
- * @date 2013-09-11
+ * @author Joki
+ * @version [V1.00, 2016年4月3日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class BaseMessage {
-    // 接收方帐号（收到的OpenID）
+public class BaseMessage
+{
+    /**
+     * 接收方帐号（收到的OpenID）
+     */
     private String ToUserName;
     
-    // 开发者微信号
+    /**
+     * 开发者微信号
+     */
     private String FromUserName;
     
-    // 消息创建时间 （整型）
+    /**
+     * 消息创建时间 （整型）
+     */
     private long CreateTime;
     
-    // 消息类型
+    /**
+     * 消息类型
+     */
     private String MsgType;
 
     public String getToUserName()

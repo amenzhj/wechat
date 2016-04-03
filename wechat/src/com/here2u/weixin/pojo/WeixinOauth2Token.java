@@ -1,25 +1,39 @@
 package com.here2u.weixin.pojo;
 
 /**
+ * 
  * 网页授权信息
  * 
- * @author liufeng
- * @date 2013-11-09
+ * @author Joki
+ * @version [V1.00, 2016年4月1日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class WeixinOauth2Token {
-    // 网页授权接口调用凭证
+public class WeixinOauth2Token
+{
+    /**
+     * 网页授权接口调用凭证
+     */
     private String accessToken;
     
-    // 凭证有效时长
+    /**
+     * 凭证有效时长
+     */
     private int expiresIn;
     
-    // 用于刷新凭证
+    /**
+     * 用于刷新凭证
+     */
     private String refreshToken;
     
-    // 用户标识
+    /**
+     * 用户标识
+     */
     private String openId;
     
-    // 用户授权作用域
+    /**
+     * 用户授权作用域
+     */
     private String scope;
 
     public String getAccessToken()

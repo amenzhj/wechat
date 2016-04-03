@@ -3,23 +3,36 @@ package com.here2u.weixin.message.event;
 /**
  * 事件基类
  * 
- * @author liufeng
- * @date 2013-11-02
+ * @author Joki
+ * @version [V1.00, 2016年4月1日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class BaseEvent {
-    // 开发者微信号
+public class BaseEvent
+{
+    /**
+     * 开发者微信号
+     */
     private String ToUserName;
     
-    // 发送方帐号（一个OpenID）
+    /**
+     * 发送方帐号（一个OpenID）
+     */
     private String FromUserName;
     
-    // 消息创建时间 （整型）
+    /**
+     * 消息创建时间 （整型）
+     */
     private long CreateTime;
     
-    // 消息类型
+    /**
+     * 消息类型
+     */
     private String MsgType;
     
-    // 事件类型
+    /**
+     * 事件类型
+     */
     private String Event;
 
     public String getToUserName()

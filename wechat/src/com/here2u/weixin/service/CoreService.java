@@ -19,10 +19,13 @@ import com.here2u.weixin.util.MySQLUtil;
 /**
  * 核心服务类
  * 
- * @author liufeng
- * @date 2013-09-29
+ * @author Joki
+ * @version [V1.00, 2016年4月3日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class CoreService {
+public class CoreService
+{
     /**
      * 处理微信发来的请求
      * 
@@ -45,14 +48,14 @@ public class CoreService {
             String toUserName = requestMap.get("ToUserName");
             // 消息类型
             String msgType = requestMap.get("MsgType");
-
+            
             // 回复文本消息
             TextMessage textMessage = new TextMessage();
             textMessage.setToUserName(fromUserName);
             textMessage.setFromUserName(toUserName);
             textMessage.setCreateTime(new Date().getTime());
             textMessage.setMsgType(MessageUtil.RESP_MESSAGE_TYPE_TEXT);
-
+            
             // 文本消息
             if (msgType.equals(MessageUtil.REQ_MESSAGE_TYPE_TEXT))
             {

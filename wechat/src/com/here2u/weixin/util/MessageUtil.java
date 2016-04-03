@@ -28,8 +28,10 @@ import com.thoughtworks.xstream.io.xml.XppDriver;
 /**
  * 消息处理工具类
  * 
- * @author liufeng
- * @date 2013-09-15
+ * @author Joki
+ * @version [V1.00, 2016年4月3日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
 public class MessageUtil {
     // 请求消息类型：文本

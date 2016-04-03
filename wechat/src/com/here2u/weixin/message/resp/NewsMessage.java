@@ -3,16 +3,23 @@ package com.here2u.weixin.message.resp;
 import java.util.List;
 
 /**
- * 文本消息
+ * 图文消息
  * 
- * @author liufeng
- * @date 2013-09-11
+ * @author Joki
+ * @version [V1.00, 2016年4月3日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class NewsMessage extends BaseMessage {
-    // 图文消息个数，限制为10条以内
+public class NewsMessage extends BaseMessage
+{
+    /**
+     * 图文消息个数，限制为10条以内
+     */
     private int ArticleCount;
     
-    // 多条图文消息信息，默认第一个item为大图
+    /**
+     * 多条图文消息信息，默认第一个item为大图
+     */
     private List<Article> Articles;
 
     public int getArticleCount()

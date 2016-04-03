@@ -3,20 +3,31 @@ package com.here2u.weixin.message.req;
 /**
  * 地理位置消息
  * 
- * @author liufeng
- * @date 2013-09-11
+ * @author Joki
+ * @version [V1.00, 2016年4月1日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
-public class LocationMessage extends BaseMessage {
-    // 地理位置维度
+public class LocationMessage extends BaseMessage
+{
+    /**
+     * 地理位置维度
+     */
     private String Location_X;
     
-    // 地理位置经度
+    /**
+     * 地理位置经度
+     */
     private String Location_Y;
     
-    // 地图缩放大小
+    /**
+     * 地图缩放大小
+     */
     private String Scale;
     
-    // 地理位置信息
+    /**
+     * 地理位置信息
+     */
     private String Label;
 
     public String getLocation_X()
