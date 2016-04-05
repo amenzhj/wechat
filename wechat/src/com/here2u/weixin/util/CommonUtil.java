@@ -21,13 +21,14 @@ import org.slf4j.LoggerFactory;
 
 import com.here2u.domain.Remind;
 import com.here2u.util.DateUtil;
+import com.here2u.util.JsonUtil;
 import com.here2u.weixin.pojo.Token;
-import com.here2u.weixin.pojo.data.DataRemind;
 import com.here2u.weixin.pojo.data.DataConfname;
 import com.here2u.weixin.pojo.data.DataDescription;
 import com.here2u.weixin.pojo.data.DataEnd;
 import com.here2u.weixin.pojo.data.DataFirst;
 import com.here2u.weixin.pojo.data.DataRemark;
+import com.here2u.weixin.pojo.data.DataRemind;
 import com.here2u.weixin.pojo.data.DataStart;
 import com.here2u.weixin.pojo.data.DataTitle;
 import com.here2u.weixin.pojo.data.TemplateNews;
@@ -258,10 +259,12 @@ public class CommonUtil
         temp.setTopcolor("#173177");
         temp.setData(data);
         
-        String jsonString = JSONObject.fromObject(temp).toString();
-        System.out.println(jsonString);
+        String jsonString = JsonUtil.toJSON(temp);
+        log.info("CommonUtil.sendTemplateMessage()" + "jsonString:" + jsonString);
+        // System.out.println(jsonString);
         JSONObject jsonObject = httpsRequest(url, "POST", jsonString);
-        System.out.println(jsonObject);
+        log.info("CommonUtil.sendTemplateMessage()." + "jsonObject:" + jsonObject);
+        // System.out.println(jsonObject);
         int result = 0;
         if (null != jsonObject)
         {

@@ -765,7 +765,8 @@ public class AdvancedUtil
         // 拼接请求地址
         String requestUrl = "http://file.api.weixin.qq.com/cgi-bin/media/get?access_token=ACCESS_TOKEN&media_id=MEDIA_ID";
         requestUrl = requestUrl.replace("ACCESS_TOKEN", accessToken).replace("MEDIA_ID", mediaId);
-        System.out.println(requestUrl);
+        log.info("AdvancedUtil.getMedia()" + "requestUrl", requestUrl);
+        // System.out.println(requestUrl);
         try
         {
             URL url = new URL(requestUrl);

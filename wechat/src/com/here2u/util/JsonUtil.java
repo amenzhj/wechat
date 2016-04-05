@@ -6,8 +6,7 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 /**
- * 
- * <一句话功能简述>
+ * json转换工具类
  * 
  * @author Joki
  * @version [V1.00, 2016年3月25日]
@@ -16,7 +15,14 @@ import net.sf.json.JSONObject;
  */
 public class JsonUtil
 {
-    
+    /**
+     * json字符串转换对象
+     * 
+     * @param json
+     * @param beanClass
+     * @return
+     * @see [类、类#方法、类#成员]
+     */
     public static Object toBean(String json, Class beanClass)
     {
         JSONObject jsonObject = JSONObject.fromObject(json);
@@ -25,6 +31,13 @@ public class JsonUtil
         
     }
     
+    /**
+     * 对象转换jsonObject字符串
+     * 
+     * @param bean
+     * @return
+     * @see [类、类#方法、类#成员]
+     */
     public static String toJSON(Object bean)
     {
         JSONObject jsonObject = JSONObject.fromObject(bean);
@@ -32,6 +45,15 @@ public class JsonUtil
         return json;
     }
 
+    /**
+     * json字符串转换list集合
+     * 
+     * 
+     * @param json
+     * @param beanClass
+     * @return
+     * @see [类、类#方法、类#成员]
+     */
     public static List toList(String json, Class beanClass)
     {
         JSONArray jsonObject = JSONArray.fromObject(json);
@@ -40,16 +62,18 @@ public class JsonUtil
         
     }
     
-    
+    /**
+     * list集合转换jsonObject字符串
+     * 
+     * @param bean
+     * @return
+     * @see [类、类#方法、类#成员]
+     */
     public static String toJSON(List bean)
     {
         JSONArray jsonObject = JSONArray.fromObject(bean);
         String json = jsonObject.toString();
         return json;
     }
-    
-   
-    
-   
     
 }

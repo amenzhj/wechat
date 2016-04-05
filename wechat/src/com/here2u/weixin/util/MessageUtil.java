@@ -33,59 +33,96 @@ import com.thoughtworks.xstream.io.xml.XppDriver;
  * @see [相关类/方法]
  * @since V1.00
  */
-public class MessageUtil {
-    // 请求消息类型：文本
+public class MessageUtil
+{
+    /**
+     * 请求消息类型：文本
+     */
     public static final String REQ_MESSAGE_TYPE_TEXT = "text";
     
-    // 请求消息类型：图片
+    /**
+     * 请求消息类型：图片
+     */
     public static final String REQ_MESSAGE_TYPE_IMAGE = "image";
     
-    // 请求消息类型：语音
+    /**
+     * 请求消息类型：语音
+     */
     public static final String REQ_MESSAGE_TYPE_VOICE = "voice";
     
-    // 请求消息类型：视频
+    /**
+     * 请求消息类型：视频
+     */
     public static final String REQ_MESSAGE_TYPE_VIDEO = "video";
     
-    // 请求消息类型：地理位置
+    /**
+     * 请求消息类型：地理位置
+     */
     public static final String REQ_MESSAGE_TYPE_LOCATION = "location";
     
-    // 请求消息类型：链接
+    /**
+     * 请求消息类型：链接
+     */
     public static final String REQ_MESSAGE_TYPE_LINK = "link";
-
-    // 请求消息类型：事件推送
+    
+    /**
+     * 请求消息类型：事件推送
+     */
     public static final String REQ_MESSAGE_TYPE_EVENT = "event";
-
-    // 事件类型：subscribe(订阅)
+    
+    /**
+     * 事件类型：subscribe(订阅)
+     */
     public static final String EVENT_TYPE_SUBSCRIBE = "subscribe";
     
-    // 事件类型：unsubscribe(取消订阅)
+    /**
+     * 事件类型：unsubscribe(取消订阅)
+     */
     public static final String EVENT_TYPE_UNSUBSCRIBE = "unsubscribe";
     
-    // 事件类型：scan(用户已关注时的扫描带参数二维码)
+    /**
+     * 事件类型：scan(用户已关注时的扫描带参数二维码)
+     */
     public static final String EVENT_TYPE_SCAN = "scan";
     
-    // 事件类型：LOCATION(上报地理位置)
+    /**
+     * 事件类型：LOCATION(上报地理位置)
+     */
     public static final String EVENT_TYPE_LOCATION = "LOCATION";
     
-    // 事件类型：CLICK(自定义菜单)
+    /**
+     * 事件类型：CLICK(自定义菜单)
+     */
     public static final String EVENT_TYPE_CLICK = "CLICK";
-
-    // 响应消息类型：文本
+    
+    /**
+     * 响应消息类型：文本
+     */
     public static final String RESP_MESSAGE_TYPE_TEXT = "text";
     
-    // 响应消息类型：图片
+    /**
+     * 响应消息类型：图片
+     */
     public static final String RESP_MESSAGE_TYPE_IMAGE = "image";
     
-    // 响应消息类型：语音
+    /**
+     * 响应消息类型：语音
+     */
     public static final String RESP_MESSAGE_TYPE_VOICE = "voice";
     
-    // 响应消息类型：视频
+    /**
+     * 响应消息类型：视频
+     */
     public static final String RESP_MESSAGE_TYPE_VIDEO = "video";
     
-    // 响应消息类型：音乐
+    /**
+     * 响应消息类型：音乐
+     */
     public static final String RESP_MESSAGE_TYPE_MUSIC = "music";
     
-    // 响应消息类型：图文
+    /**
+     * 响应消息类型：图文
+     */
     public static final String RESP_MESSAGE_TYPE_NEWS = "news";
 
     /**
@@ -101,7 +138,7 @@ public class MessageUtil {
     {
         // 将解析结果存储在HashMap中
         Map<String, String> map = new HashMap<String, String>();
-
+        
         // 从request中取得输入流
         InputStream inputStream = request.getInputStream();
         // 读取输入流
@@ -111,11 +148,11 @@ public class MessageUtil {
         Element root = document.getRootElement();
         // 得到根元素的所有子节点
         List<Element> elementList = root.elements();
-
+        
         // 遍历所有子节点
         for (Element e : elementList)
             map.put(e.getName(), e.getText());
-
+        
         // 释放资源
         inputStream.close();
         inputStream = null;

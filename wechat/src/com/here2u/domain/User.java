@@ -2,6 +2,14 @@ package com.here2u.domain;
 
 import java.io.Serializable;
 
+/**
+ * 日历用户model
+ * 
+ * @author Joki
+ * @version [V1.00, 2016年4月4日]
+ * @see [相关类/方法]
+ * @since V1.00
+ */
 public class User implements Serializable
 {
     /**
@@ -9,10 +17,19 @@ public class User implements Serializable
      */
     private static final long serialVersionUID = 1721471836632994721L;
     
+    /**
+     * id
+     */
     private Integer id;
     
+    /**
+     * userId
+     */
     private String userId;
     
+    /**
+     * 提醒设置
+     */
     private Boolean remindSetting;
     
     public Integer getId()

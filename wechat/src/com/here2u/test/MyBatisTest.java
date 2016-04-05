@@ -10,6 +10,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.here2u.domain.User;
 import com.here2u.service.UserServiceI;
 
+/**
+ * mybatis与spring整合测试
+ * 
+ * @author Joki
+ * @version [V1.00, 2016年4月4日]
+ * @see [相关类/方法]
+ * @since V1.00
+ */
 public class MyBatisTest
 {
     private UserServiceI userService;

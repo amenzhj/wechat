@@ -16,18 +16,28 @@ import com.here2u.domain.User;
 import com.here2u.service.UserServiceI;
 
 /**
- * @author gacl
- * @WebServlet是Servlet3.0提供的注解，目的是将一个继承了HttpServlet类的普通java类标注为一个Servlet
- *                                                                       UserServlet使用了@WebServlet标注之后，就不需要在web.xml中配置了
+ * 工程框架整合测试mvc
+ * 
+ * @WebServlet是Servlet3.0提供的注解，目的是将一个继承了HttpServlet类的普通java类标注为一个Servlet UserServlet使用了@WebServlet标注之后，就不需要在web.xml中配置了
+ * @author Joki
+ * @version [V1.00, 2016年4月4日]
+ * @see [相关类/方法]
+ * @since V1.00
  */
 @WebServlet("/UserServlet")
 public class UserServlet extends HttpServlet
 {
+    /**
+     * serialVersionUID
+     */
+    private static final long serialVersionUID = -7965986799224535334L;
+    
     // 处理业务逻辑的userService
     private UserServiceI userService;
     
     public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException
+    {
         // 获取所有的用户信息
         List<User> lstUsers = userService.getAllUser();
         request.setAttribute("lstUsers", lstUsers);
@@ -35,14 +45,17 @@ public class UserServlet extends HttpServlet
     }
     
     public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+        throws ServletException, IOException
+    {
         this.doGet(request, response);
     }
-
-    public void init() throws ServletException {
+    
+    public void init()
+        throws ServletException
+    {
         // 在Servlet初始化时获取Spring上下文对象(ApplicationContext)
         ApplicationContext ac = WebApplicationContextUtils.getWebApplicationContext(this.getServletContext());
         // 从ApplicationContext中获取userService
-        userService = (UserServiceI) ac.getBean("userService");
+        userService = (UserServiceI)ac.getBean("userService");
     }
 }

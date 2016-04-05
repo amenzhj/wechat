@@ -6,6 +6,9 @@ import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.here2u.util.DateUtil;
 import com.here2u.weixin.pojo.Token;
 import com.here2u.weixin.util.CommonUtil;
@@ -21,6 +24,7 @@ import com.here2u.weixin.util.CommonUtil;
  */
 public class InitServlet extends HttpServlet
 {
+    private static Logger log = LoggerFactory.getLogger(InitServlet.class);
     /**
      * serialVersionUID
      */
@@ -68,9 +72,12 @@ public class InitServlet extends HttpServlet
         APPID = config.getInitParameter("APPID");
         APPSECRET = config.getInitParameter("APPSECRET");
         BASETOKEN = config.getInitParameter("BASETOKEN");
-        System.out.println(DateUtil.format(new Date()) + InitServlet.APPID + "=======" + InitServlet.APPSECRET + "=======" + BASETOKEN);
+        log.info(DateUtil.format(new Date()) + InitServlet.APPID + "=======" + InitServlet.APPSECRET + "=======" + BASETOKEN);
+        // System.out.println(DateUtil.format(new Date()) + InitServlet.APPID + "=======" + InitServlet.APPSECRET +
+        // "=======" + BASETOKEN);
         // 获取接口访问凭证
-        TOKEN = CommonUtil.getToken(InitServlet.APPID, InitServlet.APPSECRET);
-        System.out.println("TOKEN:" + InitServlet.TOKEN);
+        TOKEN = CommonUtil.getToken("InitServlet.init()" + InitServlet.APPID, InitServlet.APPSECRET);
+        log.info("InitServlet.init()" + "TOKEN:" + InitServlet.TOKEN);
+        // System.out.println("TOKEN:" + InitServlet.TOKEN);
     }
 }

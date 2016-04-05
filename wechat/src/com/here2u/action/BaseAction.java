@@ -13,8 +13,22 @@ import org.apache.struts2.util.ServletContextAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+/**
+ * 继承ActionSupport,实现ServletRequestAware, ServletResponseAware, SessionAware, ServletContextAware
+ * 得到application session request response
+ * 
+ * @author Joki
+ * @version [V1.00, 2016年4月4日]
+ * @see [相关类/方法]
+ * @since V1.00
+ */
 public class BaseAction extends ActionSupport implements ServletRequestAware, ServletResponseAware, SessionAware, ServletContextAware
 {
+    /**
+     * serialVersionUID
+     */
+    private static final long serialVersionUID = 462666504488354696L;
+
     private ServletContext application;
     
     private HttpServletRequest request;
